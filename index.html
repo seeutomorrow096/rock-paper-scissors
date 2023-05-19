@@ -41,13 +41,29 @@
                 if(computerMove === name) {
                     return 'You pick ' + name + ', the computer pick ' + name + ', tie';
                 }
-                else if(computerMove === 'Rock') {
-                    return ''
-                else if(computerMove === 'Paper') {
-                    return 'You pick ' + name + ', the computer pick Paper, so you lose';
+                if(computerMove === 'Rock') {
+                    if(name === 'Paper') {
+                        return 'You pick ' + name + ', the computer pick ' + computerMove + ', win';
+                    }
+                    if(name === 'Scissors') {
+                        return 'You pick ' + name + ', the computer pick ' + computerMove + ', lose';
+                    }
                 }
-                else if(computerMove === 'Scissors') {
-                    return 'You pick ' + name + ', the computer pick Scissors, so you win';
+                if(computerMove === 'Paper') {
+                    if(name === 'Rock') {
+                        return 'You pick ' + name + ', the computer pick ' + computerMove + ', lose';
+                    }
+                    if(name === 'Scissors') {
+                        return 'You pick ' + name + ', the computer pick ' + computerMove + ', win';
+                    }
+                }
+                if(computerMove === 'Scissors') {
+                    if(name === 'Rock') {
+                        return 'You pick ' + name + ', the computer pick ' + computerMove + ', win';
+                    }
+                    if(name === 'Paper') {
+                        return 'You pick ' + name + ', the computer pick ' + computerMove + ', lose';
+                    }
                 }
             }
 
